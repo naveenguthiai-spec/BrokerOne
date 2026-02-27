@@ -151,9 +151,9 @@ export default function MainScreen() {
     const sdkConfig = await getSdkConfig();
     const mashupCaseType = sdkConfig.serverConfig.appMashupCaseType;
 
-    let selectedPhoneGUID = '2455b75e-3381-4a34-b7db-700dba34a670';
+    let selectedPhoneGUID = '';
     const phoneName = optionClicked ? optionClicked.trim() : '';
-  /*switch (phoneName) {
+    switch (phoneName) {
       case 'Oceonix 25 Max':
         selectedPhoneGUID = '2455b75e-3381-4a34-b7db-700dba34a670';
         break;
@@ -165,7 +165,7 @@ export default function MainScreen() {
         // Set 'Oceonix 25' as the default/fallback
         selectedPhoneGUID = '0f670ae2-3e61-47d4-b426-edd62558cfb8';
         break;
-    } */
+    }
     // Create options object with default values
     const options: {
       pageName: string;
