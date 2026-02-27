@@ -94,7 +94,7 @@
     "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.7",
     "@types/styled-components": "^5.1.35",
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/eslint-plugin": "^8.56.1",
     "@typescript-eslint/parser": "^8.34.1",
     "caniuse-lite": "^1.0.30001735",
     "compression-webpack-plugin": "^11.1.0",

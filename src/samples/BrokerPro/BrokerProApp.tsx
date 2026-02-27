@@ -71,7 +71,37 @@ export default function BrokerProApp() {
       console.warn('Pega not ready yet');
       return;
     }
+
     const sdkConfig = await getSdkConfig();
+    const mashupCaseType = sdkConfig.serverConfig.appMashupCaseType;
+        setShowPega(true);
+
+
+    let selectedPhoneGUID = '2455b75e-3381-4a34-b7db-700dba34a670';;
+
+    // Create options object with default values
+    const options: {
+      pageName: string;
+      startingFields: { [key: string]: any };
+    } = {
+      pageName: 'pyEmbedAssignment',
+      startingFields: {}
+    };
+    if (mashupCaseType === 'DIXL-MediaCo-Work-PurchasePhone') {
+      options.startingFields['PhoneModelss'] = {
+        pyGUID: selectedPhoneGUID
+      };
+    } else {
+      console.warn(`Unexpected case type: ${mashupCaseType}. PhoneModelss field not set.`);
+    }
+
+    // Call the createCase function from context to create a new case using the mashup API
+    createCase(mashupCaseType, options).then(() => {
+      console.log('createCase rendering is complete');
+    });
+
+
+    /*const sdkConfig = await getSdkConfig();
     const mashupCaseType = sdkConfig.serverConfig.appMashupCaseType;
     setShowPega(true);
     createCase(mashupCaseType, {
@@ -79,7 +109,7 @@ export default function BrokerProApp() {
       startingFields: {}
     }).then(() => {
       console.log('BrokerPro: createCase rendering complete');
-    });
+    });*/
   };
 
   const handleStatusChange = (id: string, newStatus: string) => {
