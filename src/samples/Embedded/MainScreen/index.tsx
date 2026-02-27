@@ -171,7 +171,7 @@ export default function MainScreen() {
       pageName: string;
       startingFields: { [key: string]: any };
     } = {
-      pageName: 'pyEmbedAssignmentWithStages',
+      pageName: 'pyEmbedAssignment',
       startingFields: {}
     };
     if (mashupCaseType === 'DIXL-MediaCo-Work-PurchasePhone') {
