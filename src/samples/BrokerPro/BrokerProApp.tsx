@@ -72,12 +72,11 @@ export default function BrokerProApp() {
       return;
     }
 
-    const sdkConfig = await getSdkConfig();
-    const mashupCaseType = sdkConfig.serverConfig.appMashupCaseType;
-        setShowPega(true);
+    //const sdkConfig = await getSdkConfig();
+    const mashupCaseType = 'DIXL-MediaCo-Work-PurchasePhone';
+    setShowPega(true);
 
-
-    let selectedPhoneGUID = '2455b75e-3381-4a34-b7db-700dba34a670';;
+    const selectedPhoneGUID = '2455b75e-3381-4a34-b7db-700dba34a670';
 
     // Create options object with default values
     const options: {
@@ -99,7 +98,6 @@ export default function BrokerProApp() {
     createCase(mashupCaseType, options).then(() => {
       console.log('createCase rendering is complete');
     });
-
 
     /*const sdkConfig = await getSdkConfig();
     const mashupCaseType = sdkConfig.serverConfig.appMashupCaseType;
