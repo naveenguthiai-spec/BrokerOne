@@ -13,7 +13,7 @@ import Notifications from './components/Notifications';
 import Profile from './components/Profile';
 import Icon from './components/Icon';
 import { usePega } from '../Embedded/context/PegaReadyContext';
-import { getSdkConfig } from '@pega/auth/lib/sdk-auth-manager';
+//import { getSdkConfig } from '@pega/auth/lib/sdk-auth-manager';
 
 const VIEW_LABELS: Record<string, string> = {
   dashboard: 'Dashboard',
